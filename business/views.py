@@ -8,7 +8,7 @@ from .serializers import BusinessSerializer
 
 
 class BusinessViewSet(viewsets.ModelViewSet):
-    queryset = BusinessModel.objects.all()
+    queryset = BusinessModel.objects.all().order_by('name')
     serializer_class = BusinessSerializer
     # permission_classes = (IsAuthenticated,)
     # authentication_classes = (TokenAuthentication,)

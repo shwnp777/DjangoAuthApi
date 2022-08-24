@@ -5,7 +5,7 @@ from profiles.serializers import UserSerializer
 
 
 class PostSerializer(serializers.ModelSerializer):
-    user = UserSerializer()
+    author = UserSerializer()
 
     class Meta:
         model = PostModel

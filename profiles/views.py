@@ -33,7 +33,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 class ProfileViewSet(viewsets.ModelViewSet):
-    queryset = ProfileModel.objects.all()
+    queryset = ProfileModel.objects.all().order_by('user_id')
     serializer_class = ProfileSerializer
     # permission_classes = (IsAuthenticated,)
 

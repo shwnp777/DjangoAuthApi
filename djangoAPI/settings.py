@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'profiles',
     'business',
     'client',
+    'register',
 ]
 
 REST_FRAMEWORK = {

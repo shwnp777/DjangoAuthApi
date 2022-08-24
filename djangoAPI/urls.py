@@ -23,10 +23,17 @@ from profiles.views import MyTokenObtainPairView
 
 urlpatterns = [
     path('api/users/login/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/users/register/', include('register.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('profiles.urls')),
     path('api/', include('posts.urls')),
 ]
+
+
+
+
+
+
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
